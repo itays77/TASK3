@@ -208,7 +208,7 @@ int main()
 
 	initManager(&manager, MANAGER_FILE_NAME_SRC);
 	//	  initAirline(&company);
-	initAirlineFromFile(&company, &manager, AIRLINE_FILE_NAME_DST);
+	initAirlineFromFile(&company, &manager, AIRLINE_FILE_NAME_SRC);
 
 
 	int option;
@@ -298,21 +298,21 @@ int menu()
 	return option;
 }
 
-//int initManagerAndAirline(AirportManager* pManager ,Airline* pCompany)
-//{
-//    int res = initManager(pManager, MANAGER_FILE_NAME);
-//    if (!res)
-//    {
-//        printf("error init manager\n");
-//        return 0;
-//    }
-//
-//    if (res == FROM_FILE)
-//        return initAirlineFromFile(pCompany,pManager, COMPANY_FILE_NAME);
-//    else
-//        initCompany(pCompany, pManager);
-//    return 1;
-//}
+
+int initManagerAndAirline(AirportManager* pManager ,Airline* pCompany)
+{
+    int res = initManager(pManager, MANAGER_FILE_NAME_SRC);
+    if (!res)
+    {
+        printf("error init manager\n");
+        return 0;
+    }
+
+    if(!initAirlineFromFile(pCompany, pManager, AIRLINE_FILE_NAME_SRC))
+        initAirline(pCompany);
+
+    return 1;
+}
 
 
 

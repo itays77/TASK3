@@ -80,6 +80,7 @@ void    findFlight(const Airline* pComp);
 int     readAirlineFromFile(Airline* pComp, AirportManager* pManager, const char* fileName);
 int     saveAirlineToFile(const Airline* pComp, const char* fileName);
 int     loadAirlineFromFile(Airline* pComp, const AirportManager* pManager, const char* fileName);
+void freeFlightPtr(void* pFlight);
 eSortOptions showSortMenu();
 
 #endif
