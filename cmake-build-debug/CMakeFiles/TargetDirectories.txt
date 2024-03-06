@@ -1,0 +1,3 @@
+/Users/itaysoldin/Desktop/caca/cmake-build-debug/CMakeFiles/caca.dir
+/Users/itaysoldin/Desktop/caca/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/itaysoldin/Desktop/caca/cmake-build-debug/CMakeFiles/rebuild_cache.dir
