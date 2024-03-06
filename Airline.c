@@ -221,13 +221,13 @@ void findFlight(const Airline* pComp)
     {
 
     case eSrcCode:
-        printf("Source Airport Code: \n");
+        printf("Origin: \n");
         getAirportCode(newFlight.sourceCode);
         found = bsearch(&pNewFlight, pComp->flightArr, pComp->flightCount, sizeof(Flight*), compareBySrcCode);
         break;
 
     case eDstCode:
-        printf("Destination Airport Code: \n");
+        printf("Destination: \n");
         getAirportCode(newFlight.destCode);
         found = bsearch(&pNewFlight, pComp->flightArr, pComp->flightCount, sizeof(Flight*), compareByDstCode);
         break;
